@@ -55,7 +55,7 @@ class LatestNews : Fragment() {
 
 
         latestNewsViewModel.latestNewsLiveData.observe(viewLifecycleOwner, Observer { latestNewsModel->
-            Log.d("TAG", latestNewsModel.articles[0].author)
+//            Log.d("TAG", latestNewsModel.articles[0].author)
             latestNewsRecycler.adapter= this.context?.let {
                 LatestNewsRecyclerAdapter( latestNewsModel.articles,
                     it

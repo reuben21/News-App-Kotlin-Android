@@ -5,10 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".country.view.CountryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <GridView
+        android:id="@+id/gridViewCountryNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Fragment Country" />
-
+        android:numColumns="2" />
 </FrameLayout>

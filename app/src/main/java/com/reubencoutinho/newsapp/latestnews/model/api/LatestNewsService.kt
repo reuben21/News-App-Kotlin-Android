@@ -1,5 +1,4 @@
 package com.reubencoutinho.newsapp.latestnews.model.api
-
 import com.reubencoutinho.newsapp.network.RetrofitBuilder
 
 class LatestNewsService (private val retrofitBuilder: RetrofitBuilder){
