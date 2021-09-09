@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import com.bumptech.glide.Glide
 import androidx.recyclerview.widget.RecyclerView
 import com.reubencoutinho.newsapp.R
 import com.reubencoutinho.newsapp.latestnews.model.model.Article
@@ -40,7 +40,7 @@ class LatestNewsRecyclerAdapter(
     inner class LatestNewsViewHolder(private val binding: View) : RecyclerView.ViewHolder(binding) {
         fun bind(article: Article) {
             binding.card_placeName.text = article.title
-            binding.card_placeImageUrl.setImageURI()
+            Glide.with(binding).load(article.urlToImage).into(binding.card_placeImageUrl)
 
         }
 
