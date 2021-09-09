@@ -8,7 +8,6 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import com.reubencoutinho.newsapp.country.view.CountryFragment
-import com.reubencoutinho.newsapp.home.view.HomeFragment
 import com.reubencoutinho.newsapp.latestnews.view.LatestNews
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private val latestFragment = LatestNews()
     private val countryFragment = CountryFragment()
-    private val homeFragment = HomeFragment()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,10 +39,9 @@ class MainActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
             )
         }
-
+        replaceFragment(latestFragment)
         bottom_navigation?.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.ic_news_home -> replaceFragment(homeFragment)
                 R.id.id_latest_news -> replaceFragment(latestFragment)
                 R.id.id_news_country -> replaceFragment(countryFragment)
             }
