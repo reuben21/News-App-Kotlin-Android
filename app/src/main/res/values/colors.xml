@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lavender">#def0f0</color>
+    <color name="mediumTurquoise">#52b8bb</color>
+    <color name="darkSlateGray">#055052</color>
+
+    <color name="darkerSlateGrey">#003638</color>
+    <color name="blanchedAlmond">#f3f2c9</color>
+
+</resources>

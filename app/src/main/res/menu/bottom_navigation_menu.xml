@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_news_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+
+        />
+    <item
+        android:id="@+id/id_latest_news"
+        android:enabled="true"
+        android:icon="@drawable/ic_news"
+        android:title="Latest News"
+
+        />
+
+    <item
+        android:id="@+id/id_news_country"
+        android:enabled="true"
+        android:icon="@drawable/ic_country"
+        android:title="Country"/>
+
+
+</menu>

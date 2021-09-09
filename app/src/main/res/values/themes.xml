@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NewsApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/darkerSlateGrey</item>
+        <item name="colorPrimaryVariant">@color/darkerSlateGrey</item>
+        <item name="colorOnPrimary">@color/darkerSlateGrey</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/mediumTurquoise</item>
+        <item name="colorSecondaryVariant">@color/mediumTurquoise</item>
+        <item name="colorOnSecondary">@color/mediumTurquoise</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!--    TODO: BOTTOM NAVIGATION BAR COLOR-->
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+
+
+
+
+    </style>
+
+    <!--    TODO: BOTTOM NAVIGATION BAR COLOR-->
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/darkSlateGray</item>
+        <item name="colorOnPrimary">@color/blanchedAlmond</item>
+    </style>
+</resources>
