@@ -39,7 +39,7 @@ class SawoLabsAuth : AppCompatActivity() {
                 "fa085b4a-0d04-4a16-9ecc-3177770a4fc4", // your api key
                 "6146bdd235bc1e036361243fjDJ5TTwjzcG1a0hsT2nBBs7l"  // your api key secret
             ).login(
-                "phone_number_sms", // can be one of 'email' or 'phone_number_sms'
+                "email", // can be one of 'email' or 'phone_number_sms'
                 MainActivity::class.java.name // Callback class name
             )
         }

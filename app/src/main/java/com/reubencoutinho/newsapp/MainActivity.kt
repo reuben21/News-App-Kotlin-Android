@@ -12,6 +12,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 import com.reubencoutinho.newsapp.country.view.CountryFragment
 import com.reubencoutinho.newsapp.latestnews.view.LatestNews
+import com.reubencoutinho.newsapp.profile.view.Profile
 import com.reubencoutinho.newsapp.sawolabs.SawoLabsAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import com.sawolabs.androidsdk.LOGIN_SUCCESS_MESSAGE
@@ -20,14 +21,21 @@ class MainActivity : AppCompatActivity() {
 
     private val latestFragment = LatestNews()
     private val countryFragment = CountryFragment()
+    private val profileFragment = Profile()
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val message = intent.getStringExtra(LOGIN_SUCCESS_MESSAGE)
+
         if (message != null) {
+            val bundle = Bundle()
+            bundle.putString("message", message)
+            Log.d("SAWO",message.toString())
+            profileFragment.arguments = bundle;
             try {
                 // TODO :- To Hide the Toolbar which Comes by Default
                 this.supportActionBar!!.hide()
@@ -50,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                 when(it.itemId) {
                     R.id.id_latest_news -> replaceFragment(latestFragment)
                     R.id.id_news_country -> replaceFragment(countryFragment)
+                    R.id.id_news_profile -> replaceFragment(profileFragment)
                 }
                 true
 
